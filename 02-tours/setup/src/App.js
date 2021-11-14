@@ -18,9 +18,8 @@ function App() {
       setTours(tours);
     } catch(e) {
       setLoading(false);
-      console.log(e)
+      //console.log(e)
     }
-
     // console.log(tours);
   };
 
@@ -38,7 +37,7 @@ function App() {
 
   return (
     <main>
-      <Tours/>
+      <Tours tours={tours}/>
     </main>
   );
 }
