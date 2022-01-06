@@ -15,7 +15,7 @@ function App() {
       setList(colors);
       //console.log(colors);
     } catch(error) {
-      setError(true)
+      setError(false)
       console.log(error);
     }
     
@@ -32,9 +32,8 @@ function App() {
       </section>
       <section className="colors">
         {list.map((color, index)=> {
-          console.log(color);
           return (
-            <SingleColor key={index} {...color} index={index} />
+            <SingleColor key={index} {...color} index={index}  hexColor={color.hex}/>
           );
         })}
       </section>
